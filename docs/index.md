@@ -166,11 +166,19 @@ Job id            Name             User              Time Use S Queue
 ```
 
 2.使用VNC可视化查看作业结果。
-    1. 打开VNC。 控制台操作时系统会自动打开集群安全组 12016 端口。
-       1. 在[弹性高性能计算控制台](https://ehpc.console.aliyun.com)的左侧导航栏，单击**集群**。
-       2. 在**集群**页面，找到目标集群，单击**更多** &gt; **VNC**。
-       3. 使用VNC远程连接可视化服务。具体操作，请参见[连接可视化服务](https://help.aliyun.com/zh/e-hpc/user-guide/use-vnc-to-manage-a-visualization-service#section-bf6-eyn-edu)。
-    2. 在VNC窗口中，选择**Application&gt;System Tools&gt;Terminal**。
-    3. 在Terminnal中执行命令  /usr/local/bin/adt /home/vinatest/022/vina-ehpcarrayjob/1fkn_rgd.pdbqt /home/vinatest/out.pdbqt ，打开AutoDock Tools并加载作业结果。
-    4. 在弹出的AutoDock Tools窗口中加载模型后，显示结果如下：
-       <img src="6.png" height="800" align="bottom"/>
+
+  1. 打开VNC。 控制台操作时系统会自动打开集群安全组 12016 端口。
+
+     1.在[弹性高性能计算控制台](https://ehpc.console.aliyun.com)的左侧导航栏，单击**集群**。
+
+     2.在**集群**页面，找到目标集群，单击**更多** &gt; **VNC**。
+
+     3.使用VNC远程连接可视化服务。具体操作，请参见[连接可视化服务](https://help.aliyun.com/zh/e-hpc/user-guide/use-vnc-to-manage-a-visualization-service#section-bf6-eyn-edu)。
+
+  2. 在VNC窗口中，选择**Application&gt;System Tools&gt;Terminal**。
+
+  3. 在Terminnal中执行命令  /usr/local/bin/adt /home/vinatest/022/vina-ehpcarrayjob/1fkn_rgd.pdbqt /home/vinatest/out.pdbqt ，打开AutoDock Tools并加载作业结果。
+
+  4. 在弹出的AutoDock Tools窗口中加载模型后，显示结果如下：
+
+        <img src="6.png" height="800" align="bottom"/>
