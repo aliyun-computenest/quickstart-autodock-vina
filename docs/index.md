@@ -71,24 +71,23 @@ AutoDock Vina社区版在计算巢部署的费用主要涉及：
 3. 在左侧导航栏，单击**集群**。
 4. 在**集群**页面，找到在计算巢部署好的目标集群，单击**远程连接**。
     <img src="5.png" height="700" align="bottom"/>
-
 5. 在**远程连接**页面，输入集群用户名、登录密码和端口，单击**ssh连接**。
 
 ### **步骤二：提交作业**
 
-本文通过模拟小分子配体和生物大分子受体相互作用的过程，预测配体与受体的结合模式和亲和力，模拟实现对药物的筛选。目前商业应用较广泛的Specs、Enamine和ChemDiv化合物库，均可提供大量配体模拟计算配体和给定受体的相互作用。由于不同配体之间没有依赖，因此可以大规模并行处理。本文同样适用于其它大批量、高并发处理需求的生物、医药等场景。
+   本文通过模拟小分子配体和生物大分子受体相互作用的过程，预测配体与受体的结合模式和亲和力，模拟实现对药物的筛选。目前商业应用较广泛的Specs、Enamine和ChemDiv化合物库，均可提供大量配体模拟计算配体和给定受体的相互作用。由于不同配体之间没有依赖，因此可以大规模并行处理。本文同样适用于其它大批量、高并发处理需求的生物、医药等场景。
 
 1. 下载并解压作业文件。
 
-   1.下载作业文件。
-
 >说明:如果集群中没有安装git，请先执行sudo yum install -y git安装git。
+
+下载作业文件
 
 ```
 git clone https://code.aliyun.com/best-practice/022.git
 ```
 
-   2.解压作业文件。
+解压作业文件
 
 ```
 cd 022
@@ -167,21 +166,11 @@ Job id            Name             User              Time Use S Queue
 ```
 
 2. 使用VNC可视化查看作业结果。
-
-    1. 打开VNC。 控制台操作时系统会自动打开集群安全组 12016 端口。 
-
-       1. 在[弹性高性能计算控制台](https://ehpc.console.aliyun.com)的左侧导航栏，单击**集群**。 
-
+    1. 打开VNC。 控制台操作时系统会自动打开集群安全组 12016 端口。
+       1. 在[弹性高性能计算控制台](https://ehpc.console.aliyun.com)的左侧导航栏，单击**集群**。
        2. 在**集群**页面，找到目标集群，单击**更多** &gt; **VNC**。
-
        3. 使用VNC远程连接可视化服务。具体操作，请参见[连接可视化服务](https://help.aliyun.com/zh/e-hpc/user-guide/use-vnc-to-manage-a-visualization-service#section-bf6-eyn-edu)。
-
     2. 在VNC窗口中，选择**Application&gt;System Tools&gt;Terminal**。
-
-    3. 在Terminnal中执行以下命令，打开AutoDock Tools并加载作业结果。
-
-      >/usr/local/bin/adt /home/vinatest/022/vina-ehpcarrayjob/1fkn_rgd.pdbqt /home/vinatest/out.pdbqt
-
+    3. 在Terminnal中执行以下/usr/local/bin/adt /home/vinatest/022/vina-ehpcarrayjob/1fkn_rgd.pdbqt /home/vinatest/out.pdbqt命令，打开AutoDock Tools并加载作业结果。
     4. 在弹出的AutoDock Tools窗口中加载模型后，显示结果如下：
-    
        <img src="6.png" height="800" align="bottom"/>
