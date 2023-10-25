@@ -80,20 +80,20 @@ AutoDock Vina社区版在计算巢部署的费用主要涉及：
 
 1. 下载并解压作业文件。
 
-   a.下载作业文件。
+   1.下载作业文件。
 
-   >说明:如果集群中没有安装git，请先执行sudo yum install -y git安装git。
+>说明:如果集群中没有安装git，请先执行sudo yum install -y git安装git。
 
-   ```
-   git clone https://code.aliyun.com/best-practice/022.git
-   ```
+```
+git clone https://code.aliyun.com/best-practice/022.git
+```
 
-   b.解压作业文件。
+   2.解压作业文件。
 
-   ```
-   cd 022
-   tar xzvf vina-ehpcarrayjob.tar.gz
-   ```
+```
+cd 022
+tar xzvf vina-ehpcarrayjob.tar.gz
+```
 
 2. 修改配置文件。
 
@@ -108,6 +108,7 @@ vim conf.txt
 receptor = 1fkn_rgd.pdbqt
 ligand = $file
 ```
+
 
 3. 创建作业脚本，命名为vina.sh。
 
@@ -179,9 +180,7 @@ Job id            Name             User              Time Use S Queue
 
     3. 在Terminnal中执行以下命令，打开AutoDock Tools并加载作业结果。
 
-       ```
-       /usr/local/bin/adt /home/vinatest/022/vina-ehpcarrayjob/1fkn_rgd.pdbqt /home/vinatest/out.pdbqt
-       ```
+      >/usr/local/bin/adt /home/vinatest/022/vina-ehpcarrayjob/1fkn_rgd.pdbqt /home/vinatest/out.pdbqt
 
     4. 在弹出的AutoDock Tools窗口中加载模型后，显示结果如下：
     
