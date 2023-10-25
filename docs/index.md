@@ -181,4 +181,4 @@ Job id            Name             User              Time Use S Queue
 
   4. 在弹出的AutoDock Tools窗口中加载模型后，显示结果如下：
 
-        <img src="6.png" height="800" align="bottom"/>
+     <img src="6.png" height="800" align="bottom"/>
